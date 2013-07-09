@@ -14,7 +14,7 @@ private
 
 	def create_remember_token
 	#must use self to avoid creating a local variable
-	#
-	   self.remember_token = SecureRandom.urlsafe_base64
+	  self.remember_token = SecureRandom.urlsafe_base64
+
 	end
 end
