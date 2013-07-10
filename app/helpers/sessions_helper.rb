@@ -21,6 +21,12 @@ module SessionsHelper
     user == current_user
   end
 
+  def signed_in_user  #incase of edit and update denying access unless signed in
+    unless signed_in?
+     redirect_to signin_url, notice: "Please sign in."
+  end
+end
+
 	def sign_out
      self.current_user = nil
      cookies.delete(:remember_token)
